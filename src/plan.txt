@@ -1,0 +1,66 @@
+8 x 8 board
+[row, col]
+corners: [0, 0], [0, 7], [7, 0], [7, 7]
+
+can move to
+[row+2, col+1]
+[row+2, col-1]
+[row+1, col+2]
+[row+1, col-2]
+[row-1, col+2]
+[row-1, col-2]
+[row-2, col-1]
+[row-2, col+1]
+
+not allowed to move past the borders
+row <= 7 && col <= 7
+else
+    return
+
+
+knightTravails(start, end) 
+    let path = [];
+
+    traverse(current, end)
+        base case
+        check if current is the end, if so, return current coordinate
+
+        check if current coord out of the board, if so, return
+        else
+            path.push(current);
+
+        recursive case
+        go through all 8 possible coordinates
+        current coord changes, end stays the same
+
+        depth first search algorithm
+
+
+
+search through the board
+
+if going out, return and do nothing
+else add currently visiting node to the path
+if 
+
+
+
+traverse(current, end)
+
+path = []
+
+if path not outside the border
+path.push(current)
+
+# add the next step only if its not the same as one in the path
+
+node = current;
+while (path.length !== 0) {
+    if (node === end) break
+    path.push(current[row+2, col+1])
+    do it 8 times, check if its in the border
+    node = current[row+2, col+1]
+}
+
+return path
+
